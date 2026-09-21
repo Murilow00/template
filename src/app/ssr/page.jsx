@@ -1,9 +1,10 @@
+import SeriesList from '../../components/SeriesList'
 import axios from 'axios';
 
 export default async function GetPage() {
-    let series;
+    let series = [];
 
-    try {   
+    try {
         const resp = await axios.get(`${process.env.API_URL_SERIES}?limit=50`, {
             headers: {
                 'x-api-key': process.env.API_KEY,
@@ -21,12 +22,7 @@ export default async function GetPage() {
             <p>DevTools - Network: nem aparece, pois acontece no servidor</p>
             <p>Axios.get direto na API</p>
 
-            <ul>
-                
-                {series.map((item) => (
-                    <li key={item.id}>{item.title}</li>
-                ))}
-            </ul>
+            <SeriesList series={series}/>
         </main>
     );
 }
