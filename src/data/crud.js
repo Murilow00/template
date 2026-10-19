@@ -1,4 +1,4 @@
-import { HardDrive, Icon, KeyRound, List, Server, Layers3, PlusCircle } from "lucide-react";
+import { HardDrive, Icon, KeyRound, List, Server, Layers3, PlusCircle, SquarePen, Trash2 } from "lucide-react";
 
 
 export const examples = [
@@ -44,5 +44,29 @@ export const crud = [
     description: 'Cria série via modal e API Route',
     color: 'orange',
     Icon: PlusCircle,
+    },
+    {
+        id:2,
+        method: 'Read',
+        verb: 'get',
+        description: 'Lista séries no SSR e busca pelo id em rotas dinâmicas',
+        color: 'green',
+        Icon: List  
+    },
+    {
+        id:3,
+        method: 'Update',
+        verb: 'Put',
+        description: 'Atualiza serie existente pelo id',
+        color: 'blue',
+        Icon: SquarePen,  
+    },
+    {
+        id: 4,
+        method: 'Delete',
+        verb: 'Delete',
+        description: 'Exclui série existente pelo id',
+        color: 'red',
+        Icon: Trash2,
     }
 ]
